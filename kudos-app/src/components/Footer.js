@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 function Footer() {
     return (
         <footer className='ontario-footer ontario-footer--default'>

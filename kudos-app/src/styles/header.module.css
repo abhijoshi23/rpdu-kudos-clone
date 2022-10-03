@@ -22,13 +22,6 @@
 
 
 /* Dropdown menu navbar */
-.dropdownNav {
-    background-color: #F2F2F2;
-    position: absolute;
-    width: 100vw;
-    height: 60vh;
-    overflow: hidden;
-}
 
 .dropdownNavList {
     margin: 0;

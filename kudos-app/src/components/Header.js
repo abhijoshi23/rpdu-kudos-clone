@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from "gatsby"
 import { FaBars, FaTimes } from 'react-icons/fa'
-import DropdownNav from './DropdownNav'
+import DropdownMenu from './DropdownMenu'
 
 import logo from '../images/ontario-logo--desktop.svg'
 import * as styles from "../styles/header.module.css"
@@ -60,7 +60,7 @@ function Header() {
           </div>
         </div>
 
-        {click && <DropdownNav action={handleClick} />}
+        {click && <DropdownMenu show={click} action={handleClick} />}
       </div>
     </>
   )

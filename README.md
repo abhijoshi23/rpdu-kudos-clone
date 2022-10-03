@@ -20,9 +20,6 @@ A simple mobile first (web) app to give kudos to any and everyone! Built on a ME
 [Gatsby](https://www.gatsbyjs.com/docs) is a React-based open-source framework for creating websites and apps. It's great whether you're building a portfolio site or blog, or a high-traffic e-commerce store or company homepage.
 
 ## Getting Started
-
-Prototype url: [https://lemon-cliff-00b95b410.1.azurestaticapps.net](https://lemon-cliff-00b95b410.1.azurestaticapps.net)
-
 ### Local development
 
 [Install Node](https://nodejs.org/en/download/)

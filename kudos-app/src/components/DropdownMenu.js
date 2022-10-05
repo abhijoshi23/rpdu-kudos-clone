@@ -12,7 +12,7 @@ function DropdownMenu({ show, action }) {
                     <Offcanvas.Title>Welcome to Kudos!</Offcanvas.Title>
                 </Offcanvas.Header>
                 <Offcanvas.Body>
-                    <div className={styles.dropdownNav}>
+                    <div>
                         <ul className={styles.dropdownNavList}>
                             <li className={styles.dropdownNavListItem}>
                                 <Link className={styles.dropdownNavItem} to='/home' onClick={action}>

@@ -19,7 +19,7 @@ const IndexPage = () => (
       <div className="ontario-callout">
         <h2 className="ontario-callout__title ontario-h5">Welcome to Kudos</h2>
         <p className={styles.paragraph}><strong>5</strong> Kudos created in the past 7 days, <strong>102</strong> Kudos created in total, <strong>55</strong> people has joined Kudos App!</p>
-        <p className={styles.paragraph}><Link href="login">Sign up for email reminders</Link> and we’ll notify you 60 and 30 days before your licence expires.</p>
+        <p className={styles.paragraph}><Link to="/login">Sign up for email reminders</Link> and we’ll notify you 60 and 30 days before your licence expires.</p>
       </div>
 
       <div className={styles.entryBtnGroup}>

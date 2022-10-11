@@ -2,20 +2,19 @@ import * as React from 'react';
 import { styled } from '@mui/material/styles';
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
-//import CardMedia from '@mui/material/CardMedia';
+import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
 import CardActions from '@mui/material/CardActions';
 import Collapse from '@mui/material/Collapse';
 import Avatar from '@mui/material/Avatar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
-import { red } from '@mui/material/colors';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import ShareIcon from '@mui/icons-material/Share';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 
-import { Gif } from "@giphy/react-components"
+// import { Gif } from "@giphy/react-components"
 // import { GiphyFetch } from "@giphy/js-fetch-api"
 // import { useAsync } from "react-async-hook"
 
@@ -46,7 +45,13 @@ const ExpandMore = styled((props) => {
 // }
 
 
-export default function RecipeReviewCard({ gifInfo }) {
+export default function RecipeReviewCard({ kudos }) {
+    const colorList = ["#CD0000", "#118847", "#FFD440", "#1080A6", "#551A8B", "#009ADB"]
+
+    const randomColor = () => {
+        return colorList[Math.floor(Math.random() * colorList.length)]
+    }
+
     const [expanded, setExpanded] = React.useState(false);
 
     const handleExpandClick = () => {
@@ -54,11 +59,11 @@ export default function RecipeReviewCard({ gifInfo }) {
     };
 
     return (
-        <Card sx={{ maxWidth: 345 }}>
+        <Card sx={{ maxWidth: 345, boxShadow: 10 }}>
             <CardHeader
                 avatar={
-                    <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
-                        S
+                    <Avatar sx={{ bgcolor: randomColor() }} aria-label="recipe">
+                        {kudos.sender[0]}
                     </Avatar>
                 }
                 action={
@@ -66,23 +71,23 @@ export default function RecipeReviewCard({ gifInfo }) {
                         <MoreVertIcon />
                     </IconButton>
                 }
-                title="Senders"
+                title={kudos.sender}
                 subheader="September 14, 2016"
             />
             <CardContent>
                 <Typography variant="body2" color="text.secondary">
-                    Send Kudos to @Receiver
+                    Send Kudos to <strong>@Receiver1 </strong><strong>@Receiver2 </strong>
                 </Typography>
             </CardContent>
-            {/* <CardMedia
+            <CardMedia
                 component="img"
                 height="194"
                 image="/static/images/cards/paella.jpg"
                 alt="Paella dish"
-            /> */}
+            />
             <div>
                 {/* <GifDisplay gifID={kudoInfo.kudoGif} /> */}
-                <Gif gif={gifInfo} width={200} />
+                {/* <Gif gif={gifInfo} width={200} /> */}
             </div>
             <CardContent>
                 <Typography variant="body2" color="text.secondary">
@@ -107,24 +112,6 @@ export default function RecipeReviewCard({ gifInfo }) {
                     <ExpandMoreIcon />
                 </ExpandMore>
             </CardActions>
-            <Collapse in={expanded} timeout="auto" unmountOnExit>
-                <CardContent>
-                    <Typography paragraph>Method:</Typography>
-                    <Typography paragraph>
-                        Heat 1/2 cup of the broth in a pot until simmering, add saffron and set
-                        aside for 10 minutes.
-                    </Typography>
-                    <Typography paragraph>
-                        Heat oil in a (14- to 16-inch) paella pan or a large, deep skillet over
-                        medium-high heat. Add chicken, shrimp and chorizo, and cook, stirring
-                        occasionally until lightly browned, 6 to 8 minutes. Transfer shrimp to a
-                        large plate and set aside, leaving chicken and chorizo in the pan. Add
-                        pimentón, bay leaves, garlic, tomatoes, onion, salt and pepper, and cook,
-                        stirring often until thickened and fragrant, about 10 minutes. Add
-                        saffron broth and remaining 4 1/2 cups chicken broth; bring to a boil.
-                    </Typography>
-                </CardContent>
-            </Collapse>
         </Card>
     );
 }

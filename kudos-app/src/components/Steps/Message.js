@@ -1,5 +1,6 @@
 import * as React from 'react';
 import TextField from '@mui/material/TextField';
+import PostAddRoundedIcon from '@mui/icons-material/PostAddRounded';
 
 export default function Message() {
     const [value, setValue] = React.useState('Controlled');
@@ -24,6 +25,15 @@ export default function Message() {
                 rows={4}
                 fullWidth
             />
+
+
+            <div style={{ cursor: `pointer`, display: `block`, margin: `1rem auto` }}>
+                <PostAddRoundedIcon
+                    color="primary"
+                    fontSize="large"
+                />
+                <strong style={{ padding: `0 .5rem`, color: `#0066CC` }}>Add Message</strong>
+            </div>
         </div>
     );
 }

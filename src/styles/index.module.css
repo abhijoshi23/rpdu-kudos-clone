@@ -1,0 +1,36 @@
+.banner {
+    margin: 0 auto;
+    width: 100vw;
+    height: 65vh;
+    object-fit: cover;
+}
+
+.paragraph{
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.entryBtnGroup {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.entryBtnGroup a {
+    width: 15rem;
+    display: block;
+    margin: 1rem auto;
+
+}
+
+.btnBox {
+    width: 18rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.infoText {
+    font-size: 14px;
+    color: #999999
+}

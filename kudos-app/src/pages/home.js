@@ -5,6 +5,7 @@ import Seo from "../components/seo"
 
 import data from "../data.json"
 import * as styles from "../styles/home.module.css"
+import ScrollButton from "../components/scrollButton"
 
 const HomePage = () => (
     <Layout>
@@ -20,7 +21,7 @@ const HomePage = () => (
                     return <Card key={ele.id} kudos={ele} />
                 })}
             </div>
-
+       <ScrollButton/>
         </div>
     </Layout>
 )

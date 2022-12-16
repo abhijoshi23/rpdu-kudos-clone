@@ -39,7 +39,7 @@ function DropdownMenu({ show, action }) {
                                     paddingTop: '1rem',
                                     border: '0',
                                     color: '#999999'
-                                 }
+                                }
                             }>
                                 <p>Version: 1.0.0.0</p>
                             </li>

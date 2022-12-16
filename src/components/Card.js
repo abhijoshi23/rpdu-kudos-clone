@@ -29,7 +29,7 @@ const ExpandMore = styled((props) => {
     }),
 }));
 
-////Giphy API key
+////Giphy API key.
 // const gf = new GiphyFetch("pPpjPbnxhrccqEzHjNvYuQ7tW1JcCbsE")
 
 // const GifDisplay = ({ gifID }) => {

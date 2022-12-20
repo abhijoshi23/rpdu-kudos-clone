@@ -2,18 +2,22 @@ import * as React from 'react';
 import TextField from '@mui/material/TextField';
 import PostAddRoundedIcon from '@mui/icons-material/PostAddRounded';
 
-export default function Message() {
-    const [value, setValue] = React.useState('Controlled');
+export default function Message({ addMessage }) {
+    const [message, setMessage] = React.useState('');
 
     const handleChange = (event) => {
-        setValue(event.target.value);
+        setMessage(event.target.value);
     };
+
+    const sendMessage = () => {
+        addMessage(message)
+    }
 
     return (
         <div style={{
             textAlign: `center`,
             margin: `2rem auto`,
-            maxWidth: 400,
+            maxWidth: 600,
             minWidth: 300
         }}>
 
@@ -24,10 +28,10 @@ export default function Message() {
                 multiline
                 rows={4}
                 fullWidth
+                onChange={handleChange}
             />
 
-
-            <div style={{ cursor: `pointer`, display: `block`, margin: `1rem auto` }}>
+            <div style={{ cursor: `pointer`, display: `block`, margin: `1rem auto` }} onClick={sendMessage}>
                 <PostAddRoundedIcon
                     color="primary"
                     fontSize="large"

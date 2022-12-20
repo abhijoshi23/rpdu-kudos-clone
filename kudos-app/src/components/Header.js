@@ -6,6 +6,7 @@ import DropdownMenu from './DropdownMenu'
 import logo from '../images/ontario-logo--desktop.svg'
 import * as styles from "../styles/header.module.css"
 
+import {HeaderSignInSignOut} from '../components/HeaderSignInSignOut';
 
 function Header() {
 
@@ -25,10 +26,10 @@ function Header() {
                   <img src={logo} alt="Government of Ontario" />
                 </a>
               </div>
-              <div className="ontario-columns ontario-small-6 ontario-application-header__lang-toggle">
-                <Link to="/login" className="ontario-header__language-toggler ontario-header-button ontario-header-button--without-outline">
-                  Login
-                </Link>
+              <div className="ontario-columns 
+                ontario-small-6 
+                ontario-application-header__lang-toggle">
+                  <HeaderSignInSignOut></HeaderSignInSignOut>
               </div>
             </div>
           </header>

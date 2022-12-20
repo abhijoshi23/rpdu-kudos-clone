@@ -1,6 +1,6 @@
 import * as React from "react"
 
-import { Gif, Grid } from "@giphy/react-components"
+import { Grid } from "@giphy/react-components"
 import { GiphyFetch } from "@giphy/js-fetch-api"
 //import { useAsync } from "react-async-hook"
 import ResizeObserver from "react-resize-observer";
@@ -13,13 +13,14 @@ function GifGrid({ onGifClick }) {
         giphyFetch.trending({ offset, limit: 10 });
     const [width, setWidth] = React.useState(window.innerWidth);
     return (
-        <>
+        <div style={{ overflow: "scroll", height: "600px" }}>
             <h6>Select Your Gif</h6>
             <Grid
                 onGifClick={onGifClick}
                 fetchGifs={fetchGifs}
+                limit={30}
                 width={width}
-                columns={3}
+                columns={4}
                 gutter={6}
             />
             <ResizeObserver
@@ -27,7 +28,7 @@ function GifGrid({ onGifClick }) {
                     setWidth(width);
                 }}
             />
-        </>
+        </div>
     );
 }
 

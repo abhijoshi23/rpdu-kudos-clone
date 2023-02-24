@@ -1,3 +1,5 @@
+<p> A Clone Repo for a social media kind of app that I was working on at my workplace. 
+
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://www.gatsbyjs.com">
